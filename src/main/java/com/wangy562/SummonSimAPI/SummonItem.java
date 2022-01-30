@@ -1,11 +1,13 @@
 package com.wangy562.SummonSimAPI;
 
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document
 public class SummonItem {
 
+    @Id
     private String id;
 
     private Integer rarity;  // Three, Four, or Five stars
