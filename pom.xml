@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.wangy562</groupId>
 	<artifactId>SummonSimAPI</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.0.1</version>
 	<name>SummonSimAPI</name>
 	<description>Simulate the gacha system in Genshin Impact</description>
 	<properties>
@@ -20,6 +20,12 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-mongodb</artifactId>
+			<version>3.3.1</version>
 		</dependency>
 
 		<dependency>
