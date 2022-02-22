@@ -2,15 +2,20 @@ package com.wangy562.SummonSimAPI.controllers;
 
 
 import com.wangy562.SummonSimAPI.SummonItemRepository;
-import com.wangy562.SummonSimAPI.SummonService;
-import com.wangy562.SummonSimAPI.controllers.PermBannerController;
+import com.wangy562.SummonSimAPI.services.LimitedSummonService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class LimitedBannerController extends PermBannerController {
+public class LimitedBannerController {
 
+    private SummonItemRepository summonItemRepository;
+    private LimitedSummonService limitedSummonService;
 
-    public LimitedBannerController(SummonItemRepository summonItemRepository, SummonService summonService) {
-        super(summonItemRepository, summonService);
+    @Autowired
+    public LimitedBannerController(SummonItemRepository summonItemRepository,
+                                   LimitedSummonService limitedSummonService) {
+        this.summonItemRepository = summonItemRepository;
+        this.limitedSummonService = limitedSummonService;
     }
 }

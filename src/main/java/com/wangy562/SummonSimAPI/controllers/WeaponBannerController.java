@@ -2,15 +2,19 @@ package com.wangy562.SummonSimAPI.controllers;
 
 
 import com.wangy562.SummonSimAPI.SummonItemRepository;
-import com.wangy562.SummonSimAPI.SummonService;
-import com.wangy562.SummonSimAPI.controllers.PermBannerController;
+import com.wangy562.SummonSimAPI.services.WeaponSummonService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class WeaponBannerController extends PermBannerController {
+public class WeaponBannerController {
 
+    private SummonItemRepository summonItemRepository;
+    private WeaponSummonService weaponSummonService;
 
-    public WeaponBannerController(SummonItemRepository summonItemRepository, SummonService summonService) {
-        super(summonItemRepository, summonService);
+    @Autowired
+    public WeaponBannerController(SummonItemRepository summonItemRepository, WeaponSummonService weaponSummonService) {
+        this.summonItemRepository = summonItemRepository;
+        this.weaponSummonService = weaponSummonService;
     }
 }
