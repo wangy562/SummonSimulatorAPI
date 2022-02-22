@@ -27,6 +27,8 @@ public class PermSummonService {
          * 3 star probability is 94.3%
          * 4 star probability is 5.1%
          * 5 star probability is 0.6%
+         * Randomly generates a number from 0 to 999, since this follows uniform distribution, the probability
+         * of getting a number in a range is exactly the size of the range / 1000 * 100%
          */
         int seed = random.nextInt(1000);
         int charOrWep = random.nextInt(2);  // 50% chance of getting either weapon or character
