@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@RequestMapping("/api/permBanner")
 public class PermBannerController {
 
     private SummonItemRepository summonItemRepository;
@@ -22,7 +23,7 @@ public class PermBannerController {
         this.permSummonService = permSummonService;
     }
 
-    @GetMapping
+    @GetMapping("/summon")
     @ResponseBody
     public SummonItem summonSingle(@RequestBody HashMap<String, Integer> pity) {
         // Increment pity on client side
@@ -30,7 +31,7 @@ public class PermBannerController {
         return permSummonService.summon(pityCount);
     }
 
-    @GetMapping
+    @GetMapping("/multi")
     @ResponseBody
     public List<SummonItem> summonMulti(@RequestBody HashMap<String, Integer> pity) {
         // need to increment pity here for calculations
@@ -43,12 +44,12 @@ public class PermBannerController {
         return summonItems;
     }
 
-    @PostMapping
+    @PostMapping("/addToPool")
     public void addSummonItem(@RequestBody SummonItem summonItem) {
         summonItemRepository.save(summonItem);
     }
 
-    @DeleteMapping
+    @DeleteMapping("/deleteFromPool")
     public void deleteSummonItemByName(@RequestBody SummonItem summonItem) {
         summonItemRepository.delete(summonItem);
     }
