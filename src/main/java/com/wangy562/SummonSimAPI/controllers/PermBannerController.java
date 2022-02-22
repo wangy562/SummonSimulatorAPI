@@ -6,7 +6,7 @@ import java.util.List;
 
 import com.wangy562.SummonSimAPI.SummonItem;
 import com.wangy562.SummonSimAPI.SummonItemRepository;
-import com.wangy562.SummonSimAPI.SummonService;
+import com.wangy562.SummonSimAPI.services.PermSummonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,19 +14,20 @@ import org.springframework.web.bind.annotation.*;
 public class PermBannerController {
 
     private SummonItemRepository summonItemRepository;
-    private SummonService summonService;
+    private PermSummonService permSummonService;
 
     @Autowired
-    public PermBannerController(SummonItemRepository summonItemRepository, SummonService summonService) {
+    public PermBannerController(SummonItemRepository summonItemRepository, PermSummonService permSummonService) {
         this.summonItemRepository = summonItemRepository;
-        this.summonService = summonService;
+        this.permSummonService = permSummonService;
     }
 
     @GetMapping
     @ResponseBody
     public SummonItem summonSingle(@RequestBody HashMap<String, Integer> pity) {
+        // Increment pity on client side
         Integer pityCount = pity.get("pity");
-        return summonService.summon(pityCount);
+        return permSummonService.summon(pityCount);
     }
 
     @GetMapping
@@ -36,8 +37,8 @@ public class PermBannerController {
         Integer pityCount = pity.get("pity");
         List<SummonItem> summonItems = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
+            summonItems.add(permSummonService.summon(pityCount));
             pityCount++;
-            summonItems.add(summonService.summon(pityCount));
         }
         return summonItems;
     }
