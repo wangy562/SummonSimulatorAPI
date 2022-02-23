@@ -2,7 +2,6 @@ package com.wangy562.SummonSimAPI.controllers;
 
 
 import com.wangy562.SummonSimAPI.SummonItem;
-import com.wangy562.SummonSimAPI.SummonItemRepository;
 import com.wangy562.SummonSimAPI.services.LimitedSummonService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -15,13 +14,10 @@ import java.util.List;
 @RequestMapping("/api/limitedBanner")
 public class LimitedBannerController {
 
-    private SummonItemRepository summonItemRepository;
     private LimitedSummonService limitedSummonService;
 
     @Autowired
-    public LimitedBannerController(SummonItemRepository summonItemRepository,
-                                   LimitedSummonService limitedSummonService) {
-        this.summonItemRepository = summonItemRepository;
+    public LimitedBannerController(LimitedSummonService limitedSummonService) {
         this.limitedSummonService = limitedSummonService;
     }
 
