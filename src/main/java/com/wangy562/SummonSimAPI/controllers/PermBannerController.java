@@ -44,13 +44,26 @@ public class PermBannerController {
         return summonItems;
     }
 
+    @GetMapping("/getByName")
+    public SummonItem getByName(@RequestParam String name) {
+        return summonItemRepository.findByName(name);
+    }
+
+    @GetMapping("/getByRarity")
+    public List<SummonItem> getByRarity(@RequestParam Integer rarity) {
+        return summonItemRepository.findByRarity(rarity);
+    }
+
     @PostMapping("/addToPool")
     public void addSummonItem(@RequestBody SummonItem summonItem) {
-        summonItemRepository.save(summonItem);
+        if (summonItemRepository.findByName(summonItem.getName()) == null) {
+            summonItemRepository.save(summonItem);
+        }
     }
 
     @DeleteMapping("/deleteFromPool")
-    public void deleteSummonItemByName(@RequestBody SummonItem summonItem) {
-        summonItemRepository.delete(summonItem);
+    @ResponseBody
+    public Long deleteSummonItemByName(@RequestParam String name) {
+        return summonItemRepository.deleteByName(name);
     }
 }
