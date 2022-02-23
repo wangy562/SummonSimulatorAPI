@@ -54,6 +54,16 @@ public class PermBannerController {
         return summonItemRepository.findByRarity(rarity);
     }
 
+    @GetMapping("/getByType")
+    public List<SummonItem> getByType(@RequestParam String type) {
+        return summonItemRepository.findByType(type);
+    }
+
+    @GetMapping("/getByRarityAndType")
+    public List<SummonItem> getByRarityAndType(@RequestParam Integer rarity, @RequestParam String type) {
+        return summonItemRepository.findByRarityAndType(rarity, type);
+    }
+
     @PostMapping("/addToPool")
     public void addSummonItem(@RequestBody SummonItem summonItem) {
         if (summonItemRepository.findByName(summonItem.getName()) == null) {

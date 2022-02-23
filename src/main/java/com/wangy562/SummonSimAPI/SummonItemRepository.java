@@ -15,7 +15,6 @@ public interface SummonItemRepository extends MongoRepository<SummonItem, String
     List<SummonItem> findByType(String type);
 
     List<SummonItem> findByRarityAndType(Integer rarity, String type);
-    // TODO: check functionality of this query
 
     Long deleteByName(String name);
 }
