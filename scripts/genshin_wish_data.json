@@ -1,0 +1,337 @@
+[
+  {
+    "name": "Amber",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Rosaria",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Lisa",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Diona",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Xinyan",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Yanfei",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Thoma",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Sayu",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Sara",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Sucrose",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Noelle",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Ningguang",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Xiangling",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Chongyun",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Beidou",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Xingqiu",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Fischl",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Bennett",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Razor",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Barbara",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Kaeya",
+    "type": "character",
+    "rarity": 4
+  },
+  {
+    "name": "Rust",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Sac Bow",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Sac Fragments",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Sac Greatsword",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Sac Sword",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Stringless",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Widsith",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "The Flute",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "The Bell",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Fav Bow",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Fav Lance",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Fav Codex",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Fav Greatsword",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Fav Sword",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Dragons Bane",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Painslasher",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Lions Roar",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Eye of Perception",
+    "type": "weapon",
+    "rarity": 4
+  },
+  {
+    "name": "Slingshot",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Thrilling Tales",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Sharpshooter",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Ferrous Shadow",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Skyrider Sword",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Cool Steel",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Debate Club",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Black Tassel",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Bloodtainted",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Magic Guide",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Emerald Orb",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Raven Bow",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Harbringer of Dawn",
+    "type": "weapon",
+    "rarity": 3
+  },
+  {
+    "name": "Keqing",
+    "type": "character",
+    "rarity": 5
+  },
+  {
+    "name": "Qiqi",
+    "type": "character",
+    "rarity": 5
+  },
+  {
+    "name": "Diluc",
+    "type": "character",
+    "rarity": 5
+  },
+  {
+    "name": "Mona",
+    "type": "character",
+    "rarity": 5
+  },
+  {
+    "name": "Jean",
+    "type": "character",
+    "rarity": 5
+  },
+  {
+    "name": "Skyward Harp",
+    "type": "weapon",
+    "rarity": 5
+  },
+  {
+    "name": "Skyward Atlas",
+    "type": "weapon",
+    "rarity": 5
+  },
+  {
+    "name": "Skyward Spine",
+    "type": "weapon",
+    "rarity": 5
+  },
+  {
+    "name": "Skyward Pride",
+    "type": "weapon",
+    "rarity": 5
+  },
+  {
+    "name": "Skyward Blade",
+    "type": "weapon",
+    "rarity": 5
+  },
+  {
+    "name": "Amos Bow",
+    "type": "weapon",
+    "rarity": 5
+  },
+  {
+    "name": "Lost Prayer",
+    "type": "weapon",
+    "rarity": 5
+  },
+  {
+    "name": "Jade Spear",
+    "type": "weapon",
+    "rarity": 5
+  },
+  {
+    "name": "Wolfs Gravestone",
+    "type": "weapon",
+    "rarity": 5
+  },
+  {
+    "name": "Aquila Favonia",
+    "type": "weapon",
+    "rarity": 5
+  }
+]
