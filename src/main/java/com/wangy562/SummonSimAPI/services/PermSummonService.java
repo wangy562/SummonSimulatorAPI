@@ -55,6 +55,7 @@ public class PermSummonService {
         }
         String type = charOrWep == 0 ? "character" : "weapon";
         List<SummonItem> summonItems = summonItemRepository.findByRarityAndType(rarity, type);
+        //TODO: Test this method again after populating the DB with wish objects
         int index = random.nextInt(summonItems.size());
         return summonItems.get(index);
     }

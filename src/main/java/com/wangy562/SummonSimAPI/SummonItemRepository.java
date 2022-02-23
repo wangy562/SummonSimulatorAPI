@@ -10,6 +10,8 @@ public interface SummonItemRepository extends MongoRepository<SummonItem, String
 
     SummonItem findByName(String name);
 
+    List<SummonItem> findAll();
+
     List<SummonItem> findByRarity(Integer rarity);
 
     List<SummonItem> findByType(String type);

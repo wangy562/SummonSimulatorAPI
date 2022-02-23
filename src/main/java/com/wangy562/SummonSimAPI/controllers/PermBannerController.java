@@ -44,6 +44,11 @@ public class PermBannerController {
         return summonItems;
     }
 
+    @GetMapping("/allItems")
+    public List<SummonItem> getAll() {
+        return summonItemRepository.findAll();
+    }
+
     @GetMapping("/getByName")
     public SummonItem getByName(@RequestParam String name) {
         return summonItemRepository.findByName(name);
