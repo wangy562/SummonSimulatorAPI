@@ -38,8 +38,13 @@ public class PermBannerController {
         Integer fsIncrement = fs;
         List<SummonItem> summonItems = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            summonItems.add(permSummonService.summon(pityIncrement, fsIncrement));
-            fsIncrement++;
+            SummonItem summoned = permSummonService.summon(pityIncrement, fsIncrement);
+            summonItems.add(summoned);
+            if (fsIncrement == 10 || summoned.getRarity() == 4) {
+                fsIncrement = 0;
+            } else {
+                fsIncrement++;
+            }
             pityIncrement++;
         }
         return summonItems;
