@@ -16,7 +16,8 @@ public class LimitedSummonService {
         this.summonItemRepository = summonItemRepository;
     }
 
-    public SummonItem summon(Integer pityCount, Integer guarantee) {
+    public SummonItem summon(Integer pityCount, Integer fs, Integer guarantee) {
+        //TODO: Implement checks if the summoned drop is a promotional character
         return summonItemRepository.findByName("test");
     }
 }

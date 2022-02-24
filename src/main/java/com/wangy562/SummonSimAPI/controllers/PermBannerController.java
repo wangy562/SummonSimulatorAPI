@@ -40,12 +40,17 @@ public class PermBannerController {
         for (int i = 0; i < 10; i++) {
             SummonItem summoned = permSummonService.summon(pityIncrement, fsIncrement);
             summonItems.add(summoned);
-            if (fsIncrement == 10 || summoned.getRarity() == 4) {
+            Integer itemRarity = summoned.getRarity();
+            if (fsIncrement == 10 || itemRarity == 4) {
                 fsIncrement = 0;
             } else {
                 fsIncrement++;
             }
-            pityIncrement++;
+            if (itemRarity == 5) {
+                pityIncrement = 0;
+            } else {
+                pityIncrement++;
+            }
         }
         return summonItems;
     }
