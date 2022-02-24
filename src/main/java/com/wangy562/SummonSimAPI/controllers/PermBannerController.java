@@ -1,7 +1,6 @@
 package com.wangy562.SummonSimAPI.controllers;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import com.wangy562.SummonSimAPI.SummonItem;
@@ -12,6 +11,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/permBanner")
+@CrossOrigin(origins = "http://localhost:3000")
 public class PermBannerController {
 
     private SummonItemRepository summonItemRepository;
@@ -25,21 +25,22 @@ public class PermBannerController {
 
     @GetMapping("/summon")
     @ResponseBody
-    public SummonItem summonSingle(@RequestBody HashMap<String, Integer> pity) {
+    public SummonItem summonSingle(@RequestParam Integer pity, @RequestParam Integer fs) {
         // Increment pity on client side
-        Integer pityCount = pity.get("pity");
-        return permSummonService.summon(pityCount);
+        return permSummonService.summon(pity, fs);
     }
 
     @GetMapping("/multi")
     @ResponseBody
-    public List<SummonItem> summonMulti(@RequestBody HashMap<String, Integer> pity) {
+    public List<SummonItem> summonMulti(@RequestParam Integer pity, @RequestParam Integer fs) {
         // need to increment pity here for calculations
-        Integer pityCount = pity.get("pity");
+        Integer pityIncrement = pity;
+        Integer fsIncrement = fs;
         List<SummonItem> summonItems = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            summonItems.add(permSummonService.summon(pityCount));
-            pityCount++;
+            summonItems.add(permSummonService.summon(pityIncrement, fsIncrement));
+            fsIncrement++;
+            pityIncrement++;
         }
         return summonItems;
     }
