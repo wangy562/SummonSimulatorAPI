@@ -33,9 +33,9 @@ public class PermSummonService {
         int seed = random.nextInt(1000);
         int charOrWep = random.nextInt(2);  // 50% chance of getting either weapon or character
         int rarity;
-        if (pityCount == 90) {  // 90 pity guarantees a 5 star
+        if (pityCount == 89) {  // 90 pity guarantees a 5 star
             rarity = 5;
-        } else if (pityCount >= 75) {
+        } else if (pityCount >= 74) {
             if (seed <= 742) {
                 rarity = 3;
             } else if (seed <= 793) {
@@ -53,12 +53,12 @@ public class PermSummonService {
             }
         }
         // 4 star pity mechanic, if fs is 10 then it is guaranteed 4 star, otherwise the rate is increased to 20%
-        if (rarity == 3 && fs >= 7 && fs < 10) {
+        if (rarity == 3 && fs >= 7 && fs < 9) {
             int fourStarSeed = random.nextInt(1000);
             if (fourStarSeed >= 788) {
                 rarity = 4;
             }
-        } else if (fs == 10) {
+        } else if (fs == 9) {
             rarity = 4;
         }
         // Edge case found: characters are only 4 star and above, if rarity is 3 then weapon is guaranteed
