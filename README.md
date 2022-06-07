@@ -54,6 +54,8 @@ Example of Request Body Formatting:
 
 Deletes a specified item from the summoning pool by name lookup.
 
+Request Parameter:
+
 | Key | Value | Description |
 | --- | --- | --- |
 | name | string | the name of the item to delete |
@@ -65,4 +67,77 @@ Deletes a specified item from the summoning pool by name lookup.
 Returns all of the items in the pool.
 
 <br/>
+
+**GET** api/permBanner/getByName
+
+Get an item by its name. Returns nothing if there is no matching item.
+
+Request Parameter:
+
+| Key | Value | Description |
+| --- | --- | --- |
+| name | string | the name of the item to delete |
+
+<br/>
+
+**GET** api/permBanner/getByRarity
+
+Get a list of all items with the provided rarity. Returns an empty list if there are no matching items.
+
+Request Parameter:
+
+| Key | Value | Description |
+| --- | --- | --- |
+| rarity | integer | rarity between 3 to 5 inclusive |
+
+<br/>
+
+**GET** api/permBanner/getByType
+
+Get a list of all items with the given type. Returns an empty list if there are no matching items.
+
+Request Parameter:
+
+| Key | Value | Description |
+| --- | --- | --- |
+| type | string | type is either character or weapon |
+
+<br/>
+
+**GET** api/permBanner/getByRarityAndType
+
+Get a list of all items with the given type and rarity. Returns an empty list if there are no matching items.
+
+Request Parameters:
+
+| Key | Value | Description |
+| --- | --- | --- |
+| rarity | integer | rarity between 3 to 5 inclusive |
+| type | string | type is either character or weapon |
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
